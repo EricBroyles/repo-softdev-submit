@@ -1,0 +1,29 @@
+SERVER
+
+NOTES:
+* to begin the server be sure to navigate into server folder
+* to get npm run dev working change pachage.json from....
+ - "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+to...
+ - "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+* Using uuid instead of primary key for user_id, this create a long random string
+* WHEN ADDING DATA TO DB ALLWAYS USE '' not ""
+
+
+Key Commands
+* npm run dev //begins the server
+
+
+* psql -U postgres //to get into db from terminal
+
+
+Installations
+* npm i express cors pg jsonwebtoken bcrypt
+* npm i dotenv
+* npm i -D nodemon
+* 

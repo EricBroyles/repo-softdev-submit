@@ -1,0 +1,68 @@
+CLIENT
+
+when a user attemps to complete an application force them to create a student account
+
+TO do 
+* make editing function in people for admin, 
+* add people to people, and remove people
+* Build other_user routes
+* add student id input for register
+
+* Update Next Years Rouster: opens up a multi steping modal
+ 1. Description of the steps and what to do etc
+ 2. New members to be added: shows a list of all aplicatns who have been accepted and GPA
+ * display the total number, tools to remove applicants
+ * next tab shows all rejected applicants: tools to add them
+ 3. Returning Mmebers: shows total of returning members
+ * tab over to see all members not in good standing (note a person that had previously been set as returing but say did not meet requirments should show up in returning members)
+4. Save (will just push an update to user table) or Publish (will send notification to all accpeted members, will change all accpeted user types to "member") 
+
+
+* build get tutor form for front
+* add get volunteers and get tutorforms for admin, 
+* add get for issues 
+* add get to tally all volunteer hours and stuff
+* add announcment creation form for admin, add fetch for announcemnts in users
+* fix Member profile with an actual design, and make all get and update routes
+
+* end add email verify on register, and on submital of get volunteers or get tutor
+* in the other_users be sure to have a place to see their events and tutoring
+* add notifications by email only
+WORKFLOW
+* events
+ 1. event sponsor creates an event, added to shceduel table, with approved === null
+ 2. shows up only in the admin dashboard -- all tab, event proposal tab
+ 3. if hit approve, then change the approved status in shcedule to true, other wise to false
+ 4. send an email to the listed email
+ 5. if approved is true then it shows up in shceduled tab, otherwise it is deleted from the database
+ 6. all true events then show up for the user
+
+ //admin needs to have a create event and also create tutoring forms built in
+* meeeting
+ 1. event sponsor creates an meeting as described above, added to the schedule tab 
+ 2. shows up in all and scheduled 
+ 3. get route should look for type of meeting but only show it if the date has not passed
+ 4. shows up for users as well
+
+
+
+//when storing dates in the database I need to convert them to a number of 9394730439209 from 0 to be able to compare them , and then convert that back into a whatever
+create a universal date in shceduel table
+* submitted hours
+1. 
+
+
+Commands
+* npm start
+
+Installations
+* npm i react-router-dom react-toastify
+* npm i @material-ui/core 
+        @material-ui/icons 
+        @mui/icons-material 
+        @mui/lab 
+        @material-ui/pickers 
+        date-fns 
+        @date-io/date-fns@1 
+        @mui/x-data-grid 
+npm install @material-table/core@next
